@@ -6,18 +6,17 @@ import "./Products.css";
 import { ProductsContext } from "../context/products-context";
 
 const Products = () => {
-  const productList = useContext(ProductsContext).products;
-  console.log(productList);
+  const products = useContext(ProductsContext).products;
 
   return (
     <ul className="products-list">
-      {productList.map((prod) => (
+      {products.map((prod) => (
         <ProductItem
           key={prod.id}
           id={prod.id}
           title={prod.title}
           description={prod.description}
-          isFav={prod.isFavorite}
+          // isFav={toggleFav}
         />
       ))}
     </ul>
