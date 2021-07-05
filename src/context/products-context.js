@@ -42,7 +42,6 @@ export default (props) => {
         ...currentProdList[prodIndex],
         isFavorite: newFavStatus,
       };
-      console.log(updatedProducts);
       return updatedProducts;
     });
   };

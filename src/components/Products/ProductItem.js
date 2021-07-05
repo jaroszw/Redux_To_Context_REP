@@ -14,10 +14,10 @@ const ProductItem = (props) => {
   return (
     <Card style={{ marginBottom: "1rem" }}>
       <div className="product-item">
-        <h2 className={props.isFavourite ? "is-fav" : ""}>{props.title}</h2>
+        <h2 className={props.isFav ? "is-fav" : ""}>{props.title}</h2>
         <p>{props.description}</p>
         <button
-          className={!props.isFavourite ? "button-outline" : ""}
+          className={!props.isFav ? "button-outline" : ""}
           onClick={toggleFavHandler}
         >
           {props.isFav ? "Un-Favorite" : "Favorite"}

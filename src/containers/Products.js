@@ -7,7 +7,6 @@ import { ProductsContext } from "../context/products-context";
 
 const Products = () => {
   const products = useContext(ProductsContext).products;
-
   return (
     <ul className="products-list">
       {products.map((prod) => (
@@ -16,7 +15,7 @@ const Products = () => {
           id={prod.id}
           title={prod.title}
           description={prod.description}
-          // isFav={toggleFav}
+          isFav={prod.isFavorite}
         />
       ))}
     </ul>
