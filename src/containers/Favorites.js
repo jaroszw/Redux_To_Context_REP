@@ -4,8 +4,11 @@ import { useSelector } from "react-redux";
 import FavoriteItem from "../components/Favorites/FavoriteItem";
 import "./Products.css";
 
+import { useStore } from "../hook-store/store";
+
 const Favorites = (props) => {
-  const favoriteProducts = [];
+  const state = useStore()[0];
+  const favoriteProducts = state.products.filter((p) => p.isFavorite);
   // const favoriteProducts = useSelector((state) =>
   //   state.shop.products.filter((p) => p.isFavorite)
   // );

@@ -5,11 +5,14 @@ import "./Products.css";
 
 import { ProductsContext } from "../context/products-context";
 
+import { useStore } from "../hook-store/store";
+
 const Products = () => {
-  const products = useContext(ProductsContext).products;
+  const state = useStore()[0];
+
   return (
     <ul className="products-list">
-      {products.map((prod) => (
+      {state.products.map((prod) => (
         <ProductItem
           key={prod.id}
           id={prod.id}
